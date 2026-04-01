@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Image Generator</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar h2 {
+            margin: 0;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .container {
+            margin-top: 100px;
+        }
+
+        .container h1 {
+            font-size: 42px;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        /* Button */
+        .btn {
+            padding: 12px 25px;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>Edu Image AI</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/generate">Generate</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Cloud-Based Text to Image Generator</h1>
+        <p>
+            Generate high-quality educational images using Artificial Intelligence.  
+            Perfect for students, teachers, and visual learning.
+        </p>
+
+        <a href="/generate">
+            <button class="btn">Start Generating</button>
+        </a>
+    </div>
+
+</body>
+</html>

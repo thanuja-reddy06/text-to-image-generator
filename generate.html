@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Image</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #43e97b, #38f9d7);
+            text-align: center;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 40px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            margin-top: 50px;
+        }
+
+        input, select {
+            padding: 10px;
+            width: 250px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        /* Button */
+        .btn {
+            padding: 12px 25px;
+            background-color: #ff5722;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #e64a19;
+        }
+
+        /* Image */
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+        }
+
+        /* Download Button */
+        .download-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .download-btn:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <h2>Edu Image AI</h2>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/generate">Generate</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Generate Educational Image</h1>
+
+        <form method="POST">
+            <input type="text" name="prompt" placeholder="Enter topic (e.g., Human Heart)" required><br>
+
+            <!-- Subject Dropdown -->
+            <select name="subject">
+                <option value="General">General</option>
+                <option value="Biology">Biology</option>
+                <option value="Physics">Physics</option>
+                <option value="Geography">Geography</option>
+            </select><br>
+
+            <button class="btn" type="submit">Generate Image</button>
+        </form>
+
+        <!-- Display Image -->
+        {% if image_url %}
+            <h3>Generated Image:</h3>
+            <img src="{{ image_url }}" width="400"><br>
+
+            <!-- Download Button -->
+            <a href="{{ image_url }}" download="educational_image.png">
+                <button class="download-btn">Download Image</button>
+            </a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
